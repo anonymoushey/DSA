@@ -1,0 +1,16 @@
+Follow the given procedure :-
+STEP 1: Create Adjacency Matrix for the given graph.
+STEP 2: Replace all the diagonal elements with the degree of nodes. For eg. element at (1,1) position of adjacency matrix will be replaced by the degree of node 1, element at (2,2) position of adjacency matrix will be replaced by the degree of node 2, and so on.
+STEP 3: Replace all non-diagonal 1’s with -1.
+STEP 4: Calculate co-factor for any element.
+STEP 5: The cofactor that you get is the total number of spanning tree for that graph.
+
+Consider the following graph:
+You can prove whether it has a unique MST in O(E log(V)).
+
+First find a minimum spanning tree with standard techniques.
+
+Go back to your original tree, and replace all weights with pairs of numbers, the original weight, and then 0 or 1 based on whether or not it is in the MST you found. These pairs of numbers can be added together pairwise, and compared pairwise as well - just like normal numbers.
+
+Now use the standard techniques to find a minimum spanning tree with these funny weights. The MST that you find will be the MST which shares the least edges with your original tree. Thus if there are multiple MSTs, you are guaranteed to find a different one.
+

@@ -1,0 +1,6 @@
+1) Start with a subtree T consisting of 
+   one given terminal vertex
+2) While T does not span all terminals
+   a) Select a terminal x not in T that is closest 
+      to a vertex in T.
+   b) Add to T the shortest path that connects x with T
